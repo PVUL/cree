@@ -1,3 +1,4 @@
 class Room < ApplicationRecord
-  broadcasts_to -> (room){:rooms_list}
+  has_many :messages
+  broadcasts_to ->(room) {:rooms_list}
 end
